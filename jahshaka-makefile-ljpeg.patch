@@ -1,0 +1,12 @@
+--- jah/Makefile.in~	2003-07-27 07:32:23.000000000 +0200
++++ jah/Makefile.in	2003-10-26 18:43:45.993841768 +0100
+@@ -273,7 +273,7 @@
+ 		-lglut\
+ 		-lfreetype
+ 
+-LDFLAGS = -lqt-mt -lXext -lX11 -lm
++LDFLAGS = -lqt-mt -lXext -lX11 -lm -ljpeg
+ INCLUDES = $(all_includes)\
+ 		-I$(top_srcdir)/\
+ 		-I$(top_srcdir)/jah\
+

@@ -1,0 +1,271 @@
+--- jah/Core/World/glworldinterface.cpp~	2003-08-02 08:48:10.000000000 +0200
++++ jah/Core/World/glworldinterface.cpp	2003-10-26 18:19:28.034485280 +0100
+@@ -100,7 +100,7 @@
+ 
+   /* Slider2 = new QSlider( page, "controllerslider" ); */
+     controllerslider = new QSlider( page, "controllerslider" );
+-    controllerslider->setStyle( new QPlatinumStyle );
++    controllerslider->setStyle( "Platinum" );
+     controllerslider->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)7, (QSizePolicy::SizeType)0, 0, 0, controllerslider->sizePolicy().hasHeightForWidth() ) );
+     controllerslider->setMinimumSize( QSize( 490, 0 ) );
+     controllerslider->setMaximumSize( QSize( 500, 32767 ) );
+--- jah/Core/World/glworldinterface.cpp~	2003-10-26 18:19:28.034485280 +0100
++++ jah/Core/World/glworldinterface.cpp	2003-10-26 18:20:24.544894392 +0100
+@@ -250,7 +250,7 @@
+ }
+ 
+ void GLWorld::addSlider( QSlider * slider, int x, int y, int w, int h, int range) {
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle( "Platinum" );
+     slider->setGeometry( QRect( x, y, w, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( -(range) );
+--- jah/Core/World/glworldinterface.cpp~	2003-10-26 18:20:24.544894392 +0100
++++ jah/Core/World/glworldinterface.cpp	2003-10-26 18:21:27.217366728 +0100
+@@ -274,7 +274,7 @@
+ }
+ 
+ void GLWorld::addRangeSlider( QSlider * slider, int x, int y, int w, int h, int rangemin, int rangemax) {
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle("Platinum" );
+     slider->setGeometry( QRect( x, y, w, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( rangemin );
+@@ -335,7 +335,7 @@
+ void GLWorld::addSliderAndLcd( QSlider * slider, int x, int y, int w, int h, int range,
+                                InputLCD * lcd ) {
+ 
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle( "Platinum" );
+     slider->setGeometry( QRect( x, y, w, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( -(range) );
+@@ -355,7 +355,7 @@
+ void GLWorld::addSliderAndLcd( QSlider * slider, int x, int y, int w, int h, int rangemin, int rangemax,
+                                InputLCD * lcd ) {
+ 
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle( "Platinum" );
+     slider->setGeometry( QRect( x, y, w, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( rangemin );
+@@ -388,7 +388,7 @@
+     label_font.setPointSize( size );
+     label->setFont( label_font );
+ 
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle( "Platinum" );
+     slider->setGeometry( QRect( x+10, y, w+100, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( -(range) );
+@@ -451,7 +451,7 @@
+     label_font.setPointSize( size );
+     label->setFont( label_font );
+ 
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle( "Platinum" );
+     slider->setGeometry( QRect( x+10, y, w+100, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( rangemin );
+@@ -483,7 +483,7 @@
+     label_font.setPointSize( size );
+     label->setFont( label_font );
+ 
+-    slider->setStyle( new QPlatinumStyle );
++    slider->setStyle( "Platinum" );
+     slider->setGeometry( QRect( x+10, y, w+100, h ) );
+     slider->setOrientation( QSlider::Horizontal );
+     slider->setMinValue( rangemin );
+--- jah/Core/World/glworldinterface.cpp~	2003-10-26 18:21:27.217366728 +0100
++++ jah/Core/World/glworldinterface.cpp	2003-10-26 18:22:00.574295704 +0100
+@@ -419,7 +419,7 @@
+     label_font.setPointSize( size );
+     label->setFont( label_font );
+ 
+-    dial->setStyle( new QPlatinumStyle );
++    dial->setStyle( "Platinum" );
+     dial->setGeometry( QRect( x+10, y, w+100, h ) );
+    // dial->setOrientation( QSlider::Horizontal );
+     dial->setMinValue( 0 );
+--- jah/Modules/painter/paintinterface.cpp~	2003-08-02 08:50:07.000000000 +0200
++++ jah/Modules/painter/paintinterface.cpp	2003-10-26 18:24:54.766814416 +0100
+@@ -40,7 +40,7 @@
+     toolzoomin->setFlat(true);
+ 
+     zoom = new QSlider( glworldRight, "scrubslider" );
+-    zoom->setStyle( new QPlatinumStyle );
++    zoom->setStyle("Platinum" );
+     zoom->setGeometry( QRect( 0, 150, 30, 200 ) );
+     zoom->setOrientation( QSlider::Vertical );
+     zoom->setMinValue( -10 );    zoom->setMaxValue( 10 );    zoom->setValue   ( 0 );
+@@ -128,7 +128,7 @@
+ 
+   sceneframe = new QFrame( scene_controls, "scenecontrols" );
+   sceneframe->setGeometry( QRect( 1, 1, 700, 180 ) );
+-  sceneframe->setStyle( new QPlatinumStyle );
++  sceneframe->setStyle( "Platinum" );
+ 
+   //fxobject->setGeometry( QRect( 0, 0, 700, 120) );   // was 635
+   /*
+--- jah/Modules/painter/paintinterface.cpp~	2003-10-26 18:24:54.766814416 +0100
++++ jah/Modules/painter/paintinterface.cpp	2003-10-26 18:26:44.129188808 +0100
+@@ -147,7 +147,7 @@
+   tabframe->setGeometry( QRect( 1, 1, 700, 180 ) );
+   tabframe->setTabShape( QTabWidget::Triangular );
+   tabframe->setAutoMask( FALSE );
+-  tabframe->setStyle( new QPlatinumStyle );
++  tabframe->setStyle("Platinum" );
+ 
+   objectcontrols = new QWidget( EffectsFrame, "objectcontrols" );
+   tabframe->insertTab( objectcontrols, tr( "  SCENE  " ) );
+--- jah/Modules/effect/effectinterface.cpp~	2003-08-04 07:26:59.000000000 +0200
++++ jah/Modules/effect/effectinterface.cpp	2003-10-26 18:28:43.276075728 +0100
+@@ -38,7 +38,7 @@
+     toolzoomin->setFlat(true);
+ 
+     zoom = new QSlider( glworldRight, "scrubslider" );
+-    zoom->setStyle( new QPlatinumStyle );
++    zoom->setStyle("Platinum" );
+     zoom->setGeometry( QRect( 0, 150, 30, 200 ) );
+     zoom->setOrientation( QSlider::Vertical );
+     zoom->setMinValue( -10 );    zoom->setMaxValue( 10 );    zoom->setValue   ( 0 );
+@@ -119,7 +119,7 @@
+     tabframe->setGeometry( QRect( 148, 1, 700, 180 ) );
+     tabframe->setTabShape( QTabWidget::Triangular );
+     tabframe->setAutoMask( FALSE );
+-    tabframe->setStyle( new QPlatinumStyle );
++    tabframe->setStyle( "Platinum" );
+ 
+     scenecontrols = new QWidget( EffectsFrame, "scenesettings" );
+     tabframe->insertTab( scenecontrols, tr( "  SCENE  " ) );
+--- jah/Modules/text/characterinterface.cpp~	2003-08-04 07:26:59.000000000 +0200
++++ jah/Modules/text/characterinterface.cpp	2003-10-26 18:30:32.683443280 +0100
+@@ -41,7 +41,7 @@
+     toolzoomin->setFlat(true);
+ 
+     zoom = new QSlider( glworldRight, "scrubslider" );
+-    zoom->setStyle( new QPlatinumStyle );
++    zoom->setStyle( "Platinum" );
+     zoom->setGeometry( QRect( 0, 150, 30, 200 ) );
+     zoom->setOrientation( QSlider::Vertical );
+     zoom->setMinValue( -10 );    zoom->setMaxValue( 10 );    zoom->setValue   ( 0 );
+@@ -126,7 +126,7 @@
+ 
+ 	sceneframe = new QFrame( scene_controls, "scenecontrols" );
+     sceneframe->setGeometry( QRect( 1, 1, 700, 180 ) );
+-    sceneframe->setStyle( new QPlatinumStyle );
++    sceneframe->setStyle("Platinum" );
+ 
+     //fxobject->setGeometry( QRect( 0, 0, 700, 120) );   // was 635
+ 	/*
+@@ -145,7 +145,7 @@
+     tabframe->setGeometry( QRect( 1, 1, 700, 180 ) );
+     tabframe->setTabShape( QTabWidget::Triangular );
+     tabframe->setAutoMask( FALSE );
+-    tabframe->setStyle( new QPlatinumStyle );
++    tabframe->setStyle( "Platinum" );
+ 
+     objectcontrols = new QWidget( EffectsFrame, "objectcontrols" );
+     //objectcontrols->setGeometry( QRect( 148, 1, 700, 130 ) );
+--- jah/Modules/animate/animeinterface.cpp~	2003-08-04 07:00:41.000000000 +0200
++++ jah/Modules/animate/animeinterface.cpp	2003-10-26 18:31:52.262345448 +0100
+@@ -45,7 +45,7 @@
+   toolzoomin->setFlat(true);
+ 
+   zoom = new QSlider( glworldRight, "scrubslider" );
+-  zoom->setStyle( new QPlatinumStyle );
++  zoom->setStyle( "Platinum" );
+   zoom->setGeometry( QRect( 0, 150, 30, 200 ) );
+   zoom->setOrientation( QSlider::Vertical );
+   zoom->setMinValue( -10 );    zoom->setMaxValue( 10 );    zoom->setValue   ( 0 );
+@@ -128,7 +128,7 @@
+ 
+   sceneframe = new QFrame( scene_controls, "scenecontrols" );
+   sceneframe->setGeometry( QRect( 1, 1, 700, 180 ) );
+-  sceneframe->setStyle( new QPlatinumStyle );
++  sceneframe->setStyle( "Platinum" );
+ 
+   //fxobject->setGeometry( QRect( 0, 0, 700, 120) );   // was 635
+   /*
+@@ -147,7 +147,7 @@
+   tabframe->setGeometry( QRect( 1, 2, 700, 180 ) );
+   tabframe->setTabShape( QTabWidget::Triangular );
+   tabframe->setAutoMask( FALSE );
+-  tabframe->setStyle( new QPlatinumStyle );
++  tabframe->setStyle( "Platinum" );
+ 
+ 
+   //this has become the settings panel need to update variable names
+--- jah/Modules/color/colorizeinterface.cpp~	2003-08-02 08:51:30.000000000 +0200
++++ jah/Modules/color/colorizeinterface.cpp	2003-10-26 18:33:25.044240456 +0100
+@@ -80,7 +80,7 @@
+     tabframe->setGeometry( QRect( 148, 1, 700, 180 ) );
+     tabframe->setTabShape( QTabWidget::Triangular );
+     tabframe->setAutoMask( FALSE );
+-    tabframe->setStyle( new QPlatinumStyle );
++    tabframe->setStyle( "Platinum" );
+ 
+     axiscontrols = new QWidget( EffectsFrame, "axiscontrols" );
+     tabframe->insertTab( axiscontrols, tr( "  CONTROLS  " ) );
+--- jah/Source/jahdesktopinterface.cpp~	2003-08-05 09:29:19.000000000 +0200
++++ jah/Source/jahdesktopinterface.cpp	2003-10-26 18:37:44.192843880 +0100
+@@ -305,7 +305,7 @@
+ 
+ 
+   renderqualityslider = new QSlider( prefframe2, "renderqualityslider" );
+-  renderqualityslider->setStyle( new QPlatinumStyle );
++  renderqualityslider->setStyle("Platinum" );
+   renderqualityslider->setGeometry( QRect( 65, 130, 220, 25 ) );
+   renderqualityslider->setOrientation( QSlider::Horizontal );
+   renderqualityslider->setTickmarks( QSlider::Right );
+--- jah/Source/jahinterface.cpp~	2003-08-02 08:49:20.000000000 +0200
++++ jah/Source/jahinterface.cpp	2003-10-26 18:39:12.571408296 +0100
+@@ -152,7 +152,7 @@
+ 
+ void Jah::setupMyCustomColors(QWidget * parent) {
+ 
+-  qApp->setStyle( new QSGIStyle );      //qApp->setFont( appFont, TRUE );
++  qApp->setStyle( "SGI" );      //qApp->setFont( appFont, TRUE );
+   QPalette p( QColor( 100, 100, 100 ) );
+   qApp->setPalette( p, TRUE );
+ 
+--- jah/Source/jahstyle.cpp~	2003-08-02 08:49:25.000000000 +0200
++++ jah/Source/jahstyle.cpp	2003-10-26 18:40:36.894589224 +0100
+@@ -15,32 +15,32 @@
+ 
+ void JahControl::stylePlatinum() {
+ 
+-    qApp->setStyle( new QPlatinumStyle );
++    qApp->setStyle( "Platinum" );
+     QFont::setDefaultFont(QFont("Helvetica", 10, QFont::Normal, false));
+     qApp->flushX();
+ }
+ 
+ void JahControl::styleWindows()  {
+-    qApp->setStyle( new QWindowsStyle );
++  qApp->setStyle( "Windows" );
+     QFont::setDefaultFont(QFont("Helvetica", 10, QFont::Normal, false));
+     qApp->flushX();
+ }
+ 
+ void JahControl::styleSgi()  {
+-    qApp->setStyle( new QSGIStyle );
++  qApp->setStyle( "SGI" );
+     QFont::setDefaultFont(QFont("Helvetica", 10, QFont::Normal, false));
+     qApp->flushX();
+ }
+ 
+ void JahControl::styleMotif() {
+-    qApp->setStyle( new QMotifStyle );
++  qApp->setStyle( "Motif" );
+    QFont::setDefaultFont(QFont("Helvetica", 10, QFont::Normal, false));
+    qApp->flushX();
+ }
+ 
+ void JahControl::styleCde()
+ {
+-   qApp->setStyle( new QCDEStyle );
++ qApp->setStyle( "CDE" );
+    QFont::setDefaultFont(QFont("Helvetica", 10, QFont::Normal, false));
+    qApp->flushX();
+ }
