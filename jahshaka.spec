@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Graphics
 Source0:	http://dl.sourceforge.net/jahshakafx/%{name}_%{version}.tar.gz
-# Source0-md5: 1a649c9fffeca0943b3469ccd49f0d64
+# Source0-md5:	1a649c9fffeca0943b3469ccd49f0d64
 Patch0:		%{name}-makefile-ljpeg.patch
 Patch1:		%{name}-fix-setstyle.patch
 Patch2:		%{name}-glext.patch
