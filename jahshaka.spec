@@ -13,10 +13,10 @@ Patch2:		%{name}-glext.patch
 URL:		http://www.jahshaka.com/
 BuildRequires:	glut-devel
 BuildRequires:	qt-devel
-Requires:       OpenGL
+Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _noautoreqdep   libGL.so.1 libGLU.so.1
+%define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
 Jahshaka allows you to edit with flexibility and speed Create Effects
@@ -48,22 +48,22 @@ projekty w sieci lokalnej oraz na ca³ym ¶wiecie.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-        DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -rf Pixmaps/Thumbs.db Pixmaps/.xvpics
 
 install -d $RPM_BUILD_ROOT%{_datadir}/jahshaka
-cp -R database  $RPM_BUILD_ROOT%{_datadir}/jahshaka
-cp -R fonts  $RPM_BUILD_ROOT%{_datadir}/jahshaka
-cp -R media  $RPM_BUILD_ROOT%{_datadir}/jahshaka
-cp -R models  $RPM_BUILD_ROOT%{_datadir}/jahshaka
-cp -R scenes  $RPM_BUILD_ROOT%{_datadir}/jahshaka
-cp -R Pixmaps  $RPM_BUILD_ROOT%{_datadir}/jahshaka
+cp -R database $RPM_BUILD_ROOT%{_datadir}/jahshaka
+cp -R fonts $RPM_BUILD_ROOT%{_datadir}/jahshaka
+cp -R media $RPM_BUILD_ROOT%{_datadir}/jahshaka
+cp -R models $RPM_BUILD_ROOT%{_datadir}/jahshaka
+cp -R scenes $RPM_BUILD_ROOT%{_datadir}/jahshaka
+cp -R Pixmaps $RPM_BUILD_ROOT%{_datadir}/jahshaka
 
 cat << EOF >$RPM_BUILD_ROOT%{_bindir}/jahshaka
 #!/bin/sh
 if [ ! -d "\$HOME/.jahshaka" ]; then
-        %{_bindir}/jahshaka-install
+	%{_bindir}/jahshaka-install
 fi
 cd ~/.jahshaka
 exec %{_bindir}/jah
