@@ -1,5 +1,5 @@
-Summary:	Jahshaka - Realtime Editing and Effects System.
-Summary(pl):	Jahshaka - Program do tworzenia animacji i nak³adania efektów w czasie rzeczywistym.
+Summary:	Jahshaka - Realtime Editing and Effects System
+Summary(pl):	Jahshaka - program do tworzenia animacji i nak³adania efektów w czasie rzeczywistym
 Name:		jahshaka
 Version:	1.9a3
 Release:	1
@@ -7,36 +7,37 @@ License:	GPL
 Group:		Applications/Graphics
 Source0:	http://dl.sourceforge.net/jahshakafx/%{name}_%{version}.tar.gz
 # Source0-md5: 1a649c9fffeca0943b3469ccd49f0d64
-URL:		http://www.jahshaka.com
 Patch0:		%{name}-makefile-ljpeg.patch
 Patch1:		%{name}-fix-setstyle.patch
 Patch2:		%{name}-glext.patch
+URL:		http://www.jahshaka.com/
 BuildRequires:	glut-devel
 BuildRequires:	qt-devel
 Requires:       OpenGL
-%define         _noautoreqdep   libGL.so.1 libGLU.so.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define         _noautoreqdep   libGL.so.1 libGLU.so.1
 
 %description
 Jahshaka allows you to edit with flexibility and speed Create Effects
 in real time Animate with unlimited features Paint and design on
 moving video. Create music with all the tools the pros use Work in any
-format at any resolution ...all while sharing files, projects and
+format at any resolution... all while sharing files, projects and
 clips with users on your network or around the world.
 
 %description -l pl
-Jahshaka daje mozliwo¶æ wygodnego i szybkiego nak³adania efektów specjalnych 
-na animacje oraz nieograniczon± mozliwosæ malowania na ruchomym obrazie.
-Pozwala pracowaæ z wszystkimi narzêdziami u¿ywanymi przez profesjonalistów 
-oraz tworzyæ animacje w dowolnym formacie i rozdzielczo¶ci. 
-Przy tym wszyskim pozwala udostêpniac swoje pliki i projekty w sieci lokalnej 
-oraz na ca³ym swiecie.
+Jahshaka daje mo¿liwo¶æ wygodnego i szybkiego nak³adania efektów
+specjalnych na animacje oraz nieograniczon± mo¿liwo¶æ malowania na
+ruchomym obrazie. Pozwala pracowaæ ze wszystkimi narzêdziami u¿ywanymi
+przez profesjonalistów oraz tworzyæ animacje w dowolnym formacie i
+rozdzielczo¶ci. Przy tym wszystkim pozwala udostêpniaæ swoje pliki i
+projekty w sieci lokalnej oraz na ca³ym ¶wiecie.
 
 %prep
 %setup -q -n %{name}
 %patch0 -p0
 %patch1 -p0
-%patch2 -p3
+%patch2 -p1
 
 %build
 %configure
@@ -49,10 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
         DESTDIR=$RPM_BUILD_ROOT
 
-#mkdir $RPM_BUILD_ROOT%{_datadir}
-#mkdir -p $RPM_BUILD_ROOT%{_datadir}/jahshaka/
-
-rm -rf Pixmaps/Thumbs.db Pixmaps/.xvpics/
+rm -rf Pixmaps/Thumbs.db Pixmaps/.xvpics
 
 install -d $RPM_BUILD_ROOT%{_datadir}/jahshaka
 cp -R database  $RPM_BUILD_ROOT%{_datadir}/jahshaka
@@ -74,7 +72,7 @@ EOF
 cat << EOF >$RPM_BUILD_ROOT%{_bindir}/jahshaka-install
 #!/bin/sh
 mkdir ~/.jahshaka
-cp -vR %{_datadir}/jahshaka/* ~/.jahshaka/
+cp -vR %{_datadir}/jahshaka/* ~/.jahshaka
 echo Done.
 EOF
 
