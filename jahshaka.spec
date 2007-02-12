@@ -1,5 +1,5 @@
 Summary:	Jahshaka - Realtime Editing and Effects System
-Summary(pl):	Jahshaka - program do tworzenia animacji i nak³adania efektów w czasie rzeczywistym
+Summary(pl.UTF-8):   Jahshaka - program do tworzenia animacji i nakÅ‚adania efektÃ³w w czasie rzeczywistym
 Name:		jahshaka
 Version:	1.9a3
 Release:	1
@@ -25,13 +25,13 @@ moving video. Create music with all the tools the pros use Work in any
 format at any resolution... all while sharing files, projects and
 clips with users on your network or around the world.
 
-%description -l pl
-Jahshaka daje mo¿liwo¶æ wygodnego i szybkiego nak³adania efektów
-specjalnych na animacje oraz nieograniczon± mo¿liwo¶æ malowania na
-ruchomym obrazie. Pozwala pracowaæ ze wszystkimi narzêdziami u¿ywanymi
-przez profesjonalistów oraz tworzyæ animacje w dowolnym formacie i
-rozdzielczo¶ci. Przy tym wszystkim pozwala udostêpniaæ swoje pliki i
-projekty w sieci lokalnej oraz na ca³ym ¶wiecie.
+%description -l pl.UTF-8
+Jahshaka daje moÅ¼liwoÅ›Ä‡ wygodnego i szybkiego nakÅ‚adania efektÃ³w
+specjalnych na animacje oraz nieograniczonÄ… moÅ¼liwoÅ›Ä‡ malowania na
+ruchomym obrazie. Pozwala pracowaÄ‡ ze wszystkimi narzÄ™dziami uÅ¼ywanymi
+przez profesjonalistÃ³w oraz tworzyÄ‡ animacje w dowolnym formacie i
+rozdzielczoÅ›ci. Przy tym wszystkim pozwala udostÄ™pniaÄ‡ swoje pliki i
+projekty w sieci lokalnej oraz na caÅ‚ym Å›wiecie.
 
 %prep
 %setup -q -n %{name}
