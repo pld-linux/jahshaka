@@ -1,5 +1,5 @@
 Summary:	Jahshaka - Realtime Editing and Effects System
-Summary(pl.UTF-8):   Jahshaka - program do tworzenia animacji i nakładania efektów w czasie rzeczywistym
+Summary(pl.UTF-8):	Jahshaka - program do tworzenia animacji i nakładania efektów w czasie rzeczywistym
 Name:		jahshaka
 Version:	1.9a3
 Release:	1
